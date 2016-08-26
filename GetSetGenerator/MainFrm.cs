@@ -30,6 +30,9 @@ namespace GetSetGenerator
             int VarSemiColon = 0;
             string PropOutput = "";
 
+            
+
+
             try
             {
                 VarFullLine = InputTxtBox.Text;
@@ -47,7 +50,12 @@ namespace GetSetGenerator
                     VarName = LineList[i].Substring(VarSecondSpaceIndex + 1, (VarSemiColon - 1) - VarSecondSpaceIndex);
                     VarName.Trim();
 
-                    if (CSharpRdBtn.Checked) // for C# properties
+                    if (!KeepModifiersChkBox.Checked)
+                    {
+                        VarModifer = "public";
+                    }
+
+                        if (CSharpRdBtn.Checked) // for C# properties
                     {
                         if (ReadOnlyChkBox.Checked == false)
                             PropOutput = PropOutput + VarModifer + " " + VarType + " " + PropPrefix + VarName + "\r\n{\r\n\tget { return " + VarName + "; }\r\n\tset { " + VarName + " = value; }\r\n}\r\n";

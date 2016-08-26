@@ -40,6 +40,7 @@
             this.JavaRdBtn = new System.Windows.Forms.RadioButton();
             this.CSharpRdBtn = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
+            this.KeepModifiersChkBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // InputTxtBox
@@ -55,7 +56,7 @@
             // 
             this.GenerateBtn.Location = new System.Drawing.Point(191, 308);
             this.GenerateBtn.Name = "GenerateBtn";
-            this.GenerateBtn.Size = new System.Drawing.Size(101, 43);
+            this.GenerateBtn.Size = new System.Drawing.Size(101, 66);
             this.GenerateBtn.TabIndex = 2;
             this.GenerateBtn.Text = "Generate";
             this.GenerateBtn.UseVisualStyleBackColor = true;
@@ -67,7 +68,7 @@
             this.OutputTxtBox.Multiline = true;
             this.OutputTxtBox.Name = "OutputTxtBox";
             this.OutputTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.OutputTxtBox.Size = new System.Drawing.Size(282, 326);
+            this.OutputTxtBox.Size = new System.Drawing.Size(282, 349);
             this.OutputTxtBox.TabIndex = 2;
             // 
             // PrefixTxtBox
@@ -89,7 +90,7 @@
             // ReadOnlyChkBox
             // 
             this.ReadOnlyChkBox.AutoSize = true;
-            this.ReadOnlyChkBox.Location = new System.Drawing.Point(109, 308);
+            this.ReadOnlyChkBox.Location = new System.Drawing.Point(109, 309);
             this.ReadOnlyChkBox.Name = "ReadOnlyChkBox";
             this.ReadOnlyChkBox.Size = new System.Drawing.Size(76, 17);
             this.ReadOnlyChkBox.TabIndex = 7;
@@ -147,11 +148,22 @@
             this.label4.Text = "v0.8";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // KeepModifiersChkBox
+            // 
+            this.KeepModifiersChkBox.AutoSize = true;
+            this.KeepModifiersChkBox.Location = new System.Drawing.Point(10, 357);
+            this.KeepModifiersChkBox.Name = "KeepModifiersChkBox";
+            this.KeepModifiersChkBox.Size = new System.Drawing.Size(94, 17);
+            this.KeepModifiersChkBox.TabIndex = 11;
+            this.KeepModifiersChkBox.Text = "Keep Modifers";
+            this.KeepModifiersChkBox.UseVisualStyleBackColor = true;
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 360);
+            this.ClientSize = new System.Drawing.Size(592, 385);
+            this.Controls.Add(this.KeepModifiersChkBox);
             this.Controls.Add(this.CSharpRdBtn);
             this.Controls.Add(this.JavaRdBtn);
             this.Controls.Add(this.label3);
@@ -185,6 +197,7 @@
         private System.Windows.Forms.RadioButton JavaRdBtn;
         private System.Windows.Forms.RadioButton CSharpRdBtn;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox KeepModifiersChkBox;
     }
 }
 
